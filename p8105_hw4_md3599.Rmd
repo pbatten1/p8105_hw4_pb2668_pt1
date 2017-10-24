@@ -1,0 +1,16 @@
+---
+title: "Data Science HW4"
+author: "Morgan de Ferrante"
+date: "October 24, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readr)
+FAS_pups <- read_csv("../data/FAS_pups.csv")
+
+```
