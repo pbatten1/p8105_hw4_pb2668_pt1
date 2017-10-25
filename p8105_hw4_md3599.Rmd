@@ -12,10 +12,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(readr)
 library(dplyr)
+library(tidyr)
 
 FAS_pups <- 
   read_csv("../data/FAS_pups.csv") %>%
-  janitor::clean_names()
+  janitor::clean_names() %>%
+  gather(key = "pd", value = "value", pd_ears:pd_walk) %>%
+  separate(pd, into = c("remove", "pd"), sep = "_") %>% 
+  select(-remove)
 
 
 ```
