@@ -11,6 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(readr)
-FAS_pups <- read_csv("../data/FAS_pups.csv")
+library(dplyr)
+
+FAS_pups <- 
+  read_csv("../data/FAS_pups.csv") %>%
+  janitor::clean_names()
 
 ```
