@@ -21,5 +21,4 @@ FAS_pups <-
   separate(pd, into = c("remove", "pd"), sep = "_") %>% 
   select(-remove)
 
-
 ```
